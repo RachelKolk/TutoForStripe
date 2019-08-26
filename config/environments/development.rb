@@ -14,6 +14,9 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  config.stripe.secret_key = Rails.application.credentials.stripe[:development][:secret_key]
+  config.stripe.publishable_key = Rails.application.credentials.stripe[:development][:publishable_key]
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
