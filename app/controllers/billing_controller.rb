@@ -5,4 +5,10 @@ class BillingController < ApplicationController
     @user=current_user.email
   end
 
+  def new_card
+    respond_to do |format|
+      format.js
+    end
+  end
+
 end
