@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root 'billing#index', as: :billing
 
   get '/card/new' => 'billing#new_card', as: :add_payment_method
+
+  post '/card' => 'billing#create_card', as: :create_payment_method
 end
