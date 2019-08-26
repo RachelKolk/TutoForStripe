@@ -36,4 +36,8 @@ class BillingController < ApplicationController
     end
   end
 
+  def success
+
+  end
+
 end
