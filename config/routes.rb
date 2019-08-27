@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   post '/card' => 'billing#create_card', as: :create_payment_method
 
   get '/success' => 'billing#success', as: :success
+
+  post '/subscription' => 'billing#subscribe', as: :subscribe
 end
